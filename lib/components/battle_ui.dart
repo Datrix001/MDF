@@ -17,7 +17,7 @@ class BattleUi extends StatelessWidget {
               Text("Mayank", style: CustomFont.body1(context)),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -25,22 +25,22 @@ class BattleUi extends StatelessWidget {
               Text("20", style: CustomFont.body(context)),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text("Tasks", style: CustomFont.body1(context)),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.only(left: 50, right: 50),
+            padding: const EdgeInsets.only(left: 70, right: 70),
             child: Column(
               children: [
-                card(),
+                card(title: 'Task 1'),
                 SizedBox(height: 20),
-                card(),
+                card(title: 'Task 2'),
 
                 SizedBox(height: 20),
 
-                card(),
+                card(title: "Task 3"),
                 SizedBox(height: 20),
-                card(),
+                card(title: "Task 4"),
               ],
             ),
           ),

@@ -28,20 +28,41 @@ class _HomePageState extends State<HomePage> {
 
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: ListView(
-            children: [
-              ListTile(
-                title: Text("GG", style: TextStyle(color: Colors.white)),
-              ),
-              ListTile(
-                title: Text("GG", style: TextStyle(color: Colors.white)),
-              ),
-              ListTile(
-                title: Text("GG", style: TextStyle(color: Colors.white)),
-              ),
-            ],
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20, top: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Menu", style: CustomFont.title1(context)),
+                const SizedBox(height: 20),
+                SizedBox(height: 10),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      ListTile(
+                        title: Text("Profile", style: CustomFont.body1(context)),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      ListTile(
+                        title: Text("Battle", style: CustomFont.body1(context)),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      ListTile(
+                        title: Text("Journal", style: CustomFont.body1(context)),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -75,8 +96,7 @@ class _HomePageState extends State<HomePage> {
                   ).copyWith(color: Colors.blueAccent),
                 ),
                 SizedBox(height: 20),
-                BattleUi()
-                
+                BattleUi(),
               ],
             ),
           ),
